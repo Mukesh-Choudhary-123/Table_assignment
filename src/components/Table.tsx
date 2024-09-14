@@ -67,7 +67,7 @@ export default function Table() {
             <span style={{ marginLeft: '8px' }}>Title</span>
             <OverlayPanel ref={op}>
                 <div style={{ width: '210px' }}>
-                    <InputNumber inputId="integeronly" value={value1} onValueChange={(e: InputNumberValueChangeEvent) => setValue1(e.value)} />
+                    <InputNumber inputId="integeronly" value={value1} onValueChange={(e: InputNumberValueChangeEvent) => setValue1(e.value !== undefined ? e.value : null)} />
                     <Button label="Submit" style={{ marginTop: '10px' }} onClick={handleSubmit} />
                 </div>
             </OverlayPanel>
